@@ -133,7 +133,7 @@ To tidy a dataset like this, we need to __gather__ those column into a new pair 
   the `key`, and here it is `year`.
 
 * The name of the variable whose values are spread over the cells. I call 
-  that `value`. and here it's the number of `cases`.
+  that `value`, and here it's the number of `cases`.
   
 Together those parameters generate the call to `gather()`:
 
@@ -144,7 +144,7 @@ table4a %>%
 
 The columns to gather are specified with `dplyr::select()` style notation. Here there are only two columns, so we list them individually. Note that "1999" and "2000" are non-syntactic names so we have to surround them in backticks. To refresh your memory of the other ways to select columns, see [select](#select).
 
-In the final result, the gathered columns are dropped, and we get new `key` and `value` columns. Otherwise, the relationships between the original variables are preserved. Visually, this is shown in Figure \@ref(fig:tidy-gather). 
+In the final result, the gathered columns are dropped, and we get new a `key` and `value` columns. Otherwise, the relationships between the original variables are preserved. Visually, this is shown in Figure \@ref(fig:tidy-gather). 
 
 ```{r tidy-gather, echo = FALSE, out.width = "100%", fig.cap = "Gathering `table4` into a tidy form."}
 knitr::include_graphics("images/tidy-9.png")
